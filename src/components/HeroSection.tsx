@@ -36,7 +36,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center rounded-full bg-crevi-accent px-7 py-4 text-sm font-semibold text-crevi-primary transition hover:bg-[#33c6e2]"
+              className="inline-flex items-center justify-center rounded-full bg-crevi-accent px-7 py-4 text-sm font-semibold text-white transition hover:brightness-110"
             >
               Solicitar asesoría
             </a>

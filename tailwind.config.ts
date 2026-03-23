@@ -12,16 +12,17 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         crevi: {
-          primary: "#0a1628",
-          secondary: "#1a3a5c",
-          accent: "#00b4d8",
+          primary: "#0d1b2a",
+          secondary: "#1b3a5c",
+          accent: "#f58220",
+          blue: "#2a8fd5",
           surface: "#0f2239",
           muted: "#8fa6bf",
           line: "#264d74",
         },
       },
       boxShadow: {
-        glow: "0 20px 60px rgba(0, 180, 216, 0.18)",
+        glow: "0 20px 60px rgba(245, 130, 32, 0.18)",
       },
       backgroundImage: {
         "hero-grid":

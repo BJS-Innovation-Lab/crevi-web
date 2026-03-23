@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { CloseIcon, MenuIcon } from "./Icons";
@@ -20,11 +21,15 @@ export function Navbar() {
       <div className="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-full border border-white/10 bg-crevi-primary/80 px-5 py-4 backdrop-blur-xl shadow-glow">
           <div className="flex items-center justify-between">
-            <Link
-              href="#inicio"
-              className="text-2xl font-semibold tracking-[0.25em] text-white"
-            >
-              CREVI
+            <Link href="#inicio" className="flex items-center">
+              <Image
+                src="/logo-crevi.jpg"
+                alt="CREVI Comunicaciones"
+                width={160}
+                height={50}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
 
             <nav className="hidden items-center gap-8 md:flex">

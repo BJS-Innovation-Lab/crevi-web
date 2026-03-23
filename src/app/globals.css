@@ -17,7 +17,7 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   min-height: 100vh;
   background-image:
-    radial-gradient(circle at top, rgba(0, 180, 216, 0.16), transparent 28%),
+    radial-gradient(circle at top, rgba(245, 130, 32, 0.12), transparent 28%),
     linear-gradient(180deg, #0a1628 0%, #0d1e33 45%, #08111d 100%);
 }
 
@@ -33,6 +33,6 @@ body {
   }
 
   body::selection {
-    background: rgba(0, 180, 216, 0.35);
+    background: rgba(245, 130, 32, 0.35);
   }
 }
