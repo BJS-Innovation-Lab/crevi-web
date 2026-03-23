@@ -1,39 +1,41 @@
 "use client";
 
-import { FadeIn, SectionHeading } from "./ui";
+import { motion } from "framer-motion";
 
-const badges = [
-  "Certificación Integrador",
-  "Partner Tecnológico",
-  "Cumplimiento Normativo",
-  "Especialista en Redes",
-  "Seguridad Electrónica",
-  "Misión Crítica",
+const certifications = [
+  "Avigilon — A Motorola Solutions Company",
+  "APC by Schneider Electric — Premier Partner",
+  "Notifier by Honeywell",
+  "Energy University by Schneider Electric",
+  "Cisco Certified CCNA — Routing & Switching",
+  "PMI — Project Management Institute",
+  "BICSI Certified RCDD — Registered Communications Distribution Designer",
 ];
 
 export function CertificationsSection() {
   return (
-    <section className="px-4 py-24 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="Certificaciones"
-          title="Respaldo técnico para proyectos de alta exigencia"
-          description="Este espacio puede albergar insignias oficiales de fabricantes, certificaciones de ingeniería y acreditaciones de industria."
-        />
+    <section id="clientes" className="py-20 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 bg-gradient-to-r from-gray-700/80 via-gray-600/80 to-gray-700/80 py-4 px-6">
+          <h2 className="text-center text-2xl font-bold uppercase tracking-[0.2em] text-white sm:text-3xl">
+            CREVI Comunicaciones Certificados
+          </h2>
+        </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {badges.map((badge, index) => (
-            <FadeIn key={badge} delay={index * 0.05}>
-              <div className="rounded-[1.75rem] border border-dashed border-crevi-accent/35 bg-gradient-to-br from-white/8 to-transparent p-8 text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-crevi-accent/30 bg-crevi-accent/10 text-xl font-semibold text-crevi-accent">
-                  {index + 1}
-                </div>
-                <p className="mt-5 text-lg font-medium text-white">{badge}</p>
-                <p className="mt-3 text-sm leading-6 text-crevi-muted">
-                  Placeholder para logotipo o badge oficial de certificación.
-                </p>
-              </div>
-            </FadeIn>
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+          {certifications.map((cert, i) => (
+            <motion.div
+              key={cert}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="flex items-center justify-center rounded-xl border-2 border-gray-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow min-h-[120px]"
+            >
+              <p className="text-center text-sm font-semibold text-gray-700 leading-snug">
+                {cert}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>
