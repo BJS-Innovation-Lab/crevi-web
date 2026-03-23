@@ -23,7 +23,7 @@ export function Navbar() {
           <div className="flex items-center justify-between">
             <Link href="#inicio" className="flex items-center">
               <Image
-                src="/logo-crevi.jpg"
+                src="/logo-crevi.png"
                 alt="CREVI Comunicaciones"
                 width={160}
                 height={50}
