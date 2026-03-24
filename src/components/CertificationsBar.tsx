@@ -45,7 +45,7 @@ export function CertificationsBar() {
             <img
               src={cert.logo}
               alt={cert.name}
-              className="h-8 w-auto object-contain opacity-30 transition-all duration-500 group-hover:opacity-90 group-hover:scale-110 brightness-0 invert sm:h-9"
+              className="h-8 w-auto object-contain opacity-40 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110 sm:h-9"
               loading="lazy"
             />
           </motion.a>

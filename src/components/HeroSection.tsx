@@ -103,21 +103,7 @@ export function HeroSection() {
         {/* Certifications trust bar */}
         <CertificationsBar />
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="h-10 w-6 rounded-full border-2 border-white/20 p-1"
-          >
-            <div className="h-2 w-full rounded-full bg-crevi-accent" />
-          </motion.div>
-        </motion.div>
+{/* Scroll indicator removed */}
       </div>
     </section>
   );
