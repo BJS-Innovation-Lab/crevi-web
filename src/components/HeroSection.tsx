@@ -1,30 +1,13 @@
 "use client";
 
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 import { CertificationsBar } from "./CertificationsBar";
 
 export function HeroSection() {
-  const ref = useRef<HTMLElement>(null);
-  const mouseX = useMotionValue(0.5);
-  const mouseY = useMotionValue(0.5);
-
-  const glowX = useTransform(mouseX, [0, 1], ["20%", "80%"]);
-  const glowY = useTransform(mouseY, [0, 1], ["20%", "80%"]);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    mouseX.set((e.clientX - rect.left) / rect.width);
-    mouseY.set((e.clientY - rect.top) / rect.height);
-  };
-
   return (
     <section
-      ref={ref}
       id="inicio"
-      onMouseMove={handleMouseMove}
       className="relative flex min-h-screen items-center overflow-hidden pt-20"
     >
       {/* Multi-layer background */}
@@ -39,17 +22,8 @@ export function HeroSection() {
         <div className="animate-scanline absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-crevi-accent/20 to-transparent" />
       </div>
 
-      {/* Mouse-tracking glow */}
-      <motion.div
-        className="pointer-events-none absolute -z-10 h-[600px] w-[600px] rounded-full opacity-30 blur-[150px]"
-        style={{
-          left: glowX,
-          top: glowY,
-          x: "-50%",
-          y: "-50%",
-          background: "radial-gradient(circle, rgba(245,130,32,0.15), rgba(42,143,213,0.08), transparent 70%)",
-        }}
-      />
+      {/* Static accent glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-crevi-accent/[0.06] blur-[150px] -z-10" />
 
       {/* Floating geometric shapes */}
       <motion.div
