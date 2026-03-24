@@ -33,6 +33,11 @@ export function HeroSection() {
       {/* Animated grid */}
       <div className="absolute inset-0 -z-10 bg-hero-grid bg-[size:80px_80px] opacity-20" />
 
+      {/* Scan line */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="animate-scanline absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-crevi-accent/20 to-transparent" />
+      </div>
+
       {/* Mouse-tracking glow */}
       <motion.div
         className="pointer-events-none absolute -z-10 h-[600px] w-[600px] rounded-full opacity-30 blur-[150px]"

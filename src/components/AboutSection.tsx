@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { BorderBeam } from "./BorderBeam";
 
 const services = [
   {
@@ -76,10 +77,9 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-10 backdrop-blur-md transition-all duration-500 hover:border-crevi-accent/30 hover:shadow-glow"
+              className="group relative rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.05] to-white/[0.01] p-10 backdrop-blur-md transition-all duration-500 hover:shadow-glow"
             >
-              {/* Accent glow on hover */}
-              <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-crevi-accent/10 via-transparent to-crevi-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <BorderBeam duration={8} delay={i * 2} />
               
               <div className="relative">
                 <div className="mb-8 inline-flex rounded-xl border border-white/10 bg-white/5 p-4">

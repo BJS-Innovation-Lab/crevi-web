@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import { CloseIcon, MenuIcon } from "./Icons";
 
@@ -16,18 +16,29 @@ const navItems = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const bgOpacity = useTransform(scrollY, [0, 100], [0, 0.95]);
+  const borderOpacity = useTransform(scrollY, [0, 100], [0, 0.1]);
+  const blur = useTransform(scrollY, [0, 100], [0, 20]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-crevi-primary/95 backdrop-blur-md border-b border-white/5">
+    <motion.header
+      className="fixed inset-x-0 top-0 z-50"
+      style={{
+        backgroundColor: useTransform(bgOpacity, (v) => `rgba(10, 22, 40, ${v})`),
+        borderBottom: useTransform(borderOpacity, (v) => `1px solid rgba(255,255,255,${v})`),
+        backdropFilter: useTransform(blur, (v) => `blur(${v}px)`),
+      }}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
+        <div className="flex items-center justify-between py-4">
           <Link href="#inicio" className="flex items-center">
             <Image
               src="/logo-crevi.png"
               alt="CREVI Comunicaciones"
               width={180}
               height={56}
-              className="h-12 w-auto object-contain"
+              className="h-10 w-auto object-contain sm:h-12"
               priority
             />
           </Link>
@@ -37,9 +48,10 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-crevi-muted transition hover:text-crevi-accent"
+                className="relative text-sm font-medium text-crevi-muted transition hover:text-white group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-crevi-accent transition-all group-hover:w-full" />
               </Link>
             ))}
           </nav>
@@ -78,6 +90,6 @@ export function Navbar() {
           )}
         </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   );
 }

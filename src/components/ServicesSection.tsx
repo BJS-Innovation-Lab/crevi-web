@@ -88,9 +88,11 @@ export function ServicesSection() {
               transition={{ duration: 0.6, delay: i * 0.12 }}
               className="group relative"
             >
-              <div className="relative h-full rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 backdrop-blur-sm transition-all duration-500 hover:border-crevi-accent/20 hover:bg-white/[0.06]">
+              <div className="relative h-full rounded-2xl border border-white/[0.08] bg-white/[0.03] p-8 backdrop-blur-sm transition-all duration-500 hover:border-crevi-accent/20 hover:bg-white/[0.06] hover:-translate-y-1">
                 {/* Top accent line */}
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-crevi-accent/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Side accent */}
+                <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-crevi-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Number watermark */}
                 <span className="absolute top-4 right-4 text-6xl font-black text-white/[0.03] select-none">
