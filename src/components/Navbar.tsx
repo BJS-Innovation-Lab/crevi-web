@@ -8,7 +8,7 @@ import { CloseIcon, MenuIcon } from "./Icons";
 
 const navItems = [
   { href: "#inicio", label: "Inicio" },
-  { href: "#quienes-somos", label: "Quienes somos" },
+  { href: "/quienes-somos", label: "Quienes somos" },
   { href: "#servicios", label: "Servicios" },
   { href: "#clientes", label: "Clientes y Aliados" },
   { href: "#contacto", label: "Contacto" },
