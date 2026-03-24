@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { CertificationsBar } from "./CertificationsBar";
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null);
@@ -124,6 +125,9 @@ export function HeroSection() {
             </a>
           </motion.div>
         </motion.div>
+
+        {/* Certifications trust bar */}
+        <CertificationsBar />
 
         {/* Scroll indicator */}
         <motion.div
