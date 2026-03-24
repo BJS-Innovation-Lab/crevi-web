@@ -14,7 +14,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   min-height: 100vh;
   background-image:
     radial-gradient(circle at top, rgba(245, 130, 32, 0.12), transparent 28%),

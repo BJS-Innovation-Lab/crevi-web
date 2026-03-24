@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "CREVI Comunicaciones",
+  title: "CREVI Comunicaciones | Seguridad y Misión Crítica",
   description:
-    "Servicios profesionales en tecnologías de seguridad y misión crítica para proyectos empresariales e institucionales en México.",
+    "Servicios profesionales en tecnologías de seguridad y misión crítica. Más de 20 años de experiencia integrando soluciones para empresas e instituciones en México.",
 };
 
 export default function RootLayout({
@@ -25,10 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="es" className="scroll-smooth">
+      <body className={`${inter.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

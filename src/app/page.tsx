@@ -6,10 +6,12 @@ import { CertificationsSection } from "../components/CertificationsSection";
 import { ServicesSection } from "../components/ServicesSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { ParticleNetwork } from "../components/ParticleNetwork";
 
 export default function Home() {
   return (
     <>
+      <ParticleNetwork />
       <Navbar />
       <HeroSection />
       <AboutSection />
