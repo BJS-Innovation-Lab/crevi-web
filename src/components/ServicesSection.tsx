@@ -29,7 +29,7 @@ const services = [
   {
     title: "MANTENIMIENTOS",
     description: "Servicio preventivo y correctivo con respuesta garantizada 24/7",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80",
     icon: (
       <svg viewBox="0 0 56 56" fill="none" className="h-10 w-10">
         <path d="M20 12l-4 16 8 4-4 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-crevi-accent" />
