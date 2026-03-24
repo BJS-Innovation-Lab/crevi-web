@@ -3,6 +3,7 @@ import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { StatsSection } from "../components/StatsSection";
 import { ServicesSection } from "../components/ServicesSection";
+import { ClientsSection } from "../components/ClientsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { ParticleNetwork } from "../components/ParticleNetwork";
@@ -20,6 +21,8 @@ export default function Home() {
       <StatsSection />
       <SectionDivider />
       <ServicesSection />
+      <SectionDivider />
+      <ClientsSection />
       <SectionDivider />
       <ContactSection />
       <Footer />
